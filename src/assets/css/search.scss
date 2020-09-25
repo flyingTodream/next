@@ -1,0 +1,50 @@
+
+.vx-bannerDiv {
+    padding: 20px 20px;
+  }
+  .vx-tags__group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    // margin-left: 3rem;
+    .active,
+    .activeFirst {
+      color: #409eff;
+      background: #eee;
+    }
+    .activeFirst:hover {
+      color: #409eff;
+    }
+  }
+  .vx-search-first-item{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .vx-search-tags{
+    width: 85%;
+    min-width: 900px;
+  }
+  .vx-tags__item:hover {
+    color: #409eff;
+    background: #eee;
+  }
+  .hotSearch{
+    width: 95rem;
+    margin: 1.26rem auto;
+    height: 15rem;
+    background-image: url(../image/信息展示／卡片／全卡片形式@2x.png);
+    background-size: cover;
+    color: #fff;
+    .text{
+        font-size: 2.25rem;
+        font-family: MicrosoftYaHei-Bold, MicrosoftYaHei;
+        font-weight: bold;
+        color: #FFFFFF;
+        line-height: 2.5rem;
+        letter-spacing: 6px;
+        width: 100%;
+        text-align: center;
+        padding: 3.13rem 0 0 0;
+    }
+  }

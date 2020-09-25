@@ -1,0 +1,207 @@
+.vx-home{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-width: 80rem;
+  min-height: 43.75rem;
+  .home-content{
+    flex: 1;
+    position: relative;
+    margin-left: 4rem;
+    margin-top: 5.875rem;
+    .home-image{
+      z-index: -1;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 83.25rem;
+      height: 48.4375rem;
+      background-image: url(../image/home.png);
+      background-size: 100% 100%;
+    }
+    .vx-title{
+      width: 18.375rem;
+      min-width: 18.375rem;
+      height: 6.75rem;
+      font-size: 2.625rem;
+      font-family:PingFangSC-Medium,PingFang SC;
+      font-weight:600;
+      color:#000;
+      
+    }
+    .vx-interduce{
+      width: 24.6875rem;
+      height: 3.75rem;
+      font-size: 1.125rem;
+      font-family:PingFangSC-Light,PingFang SC;
+      font-weight:300;
+      color:rgba(14,19,24,0.7);
+      line-height: 1.875rem;
+      margin-top: 1.375rem;
+    }
+    .vx-begin{
+      margin-top: 1.875rem;
+      width: 25.375rem;
+      height: 3.375rem;
+      background:rgba(64,158,255,1);
+      border-radius:6px;
+      font-size: 1.125rem;
+      font-family:Helvetica;
+      color:rgba(255,255,255,1);
+      line-height:30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .vx-begin:active{
+      opacity: .3;
+    }
+  }
+  .copyright{
+    position: absolute;
+    // left: 2.75rem;
+    bottom: 1.5rem;
+    width: 15.375rem;
+    min-width: max-content;
+    height: 1.5625rem;
+    font-size: 1.125rem;
+    font-family:PingFangSC-Light,PingFang SC;
+    font-weight: 300;
+    color:rgba(41,48,57,1);
+    line-height: 1.5625rem;
+  }
+}
+.home-head{
+  width: 95rem;
+  margin: 0 auto;
+  height: 5.625rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  .logo{
+    color: #409EFF;
+    font-size: 1.625rem;
+    font-weight: 800;
+    display: flex;
+    flex-direction: row;
+    left: 0rem;
+    position: absolute;
+    font-family:SourceHanSansCN-Heavy,SourceHanSansCN;
+    .logo-img{
+      width: 2.375rem;
+      height: 2.375rem;
+      background-image: url(../image/logo@2x.png);
+      background-size: 100% 100%;
+    }
+    .logo-text{
+      padding: 0 8px;
+    }
+  }
+  .vx-nav{
+    display: flex;
+    position: absolute;
+    left: 14.875rem;
+    height: 100%;
+    color: #0E1318;
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-family:PingFangSC-Medium,PingFang SC;
+    li{
+      list-style: none;
+      margin-right: 40px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      .border{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .active{
+      font-weight: 600;
+      transition: all .3s;
+      .border{
+        border-top: 4px solid #409EFF;
+        border-radius: 4px;
+      }
+    }
+    li:hover{
+      font-weight: 600;
+      .border{
+        border-top: 4px solid #409EFF;
+        border-radius: 4px;
+      }
+    }
+  }
+  .login{
+    position: absolute;
+    right: 0rem;
+    width: 9rem;
+    color: #fff;
+    height: 3.375rem;
+    background:rgba(64,158,255,1);
+    border-radius:4px;
+    opacity:0.9;
+    font-size: 1.125rem;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+  .login:active{
+    opacity: .3;
+  }
+  .afterlogin{
+    position: absolute;
+    right: 0rem;
+    width: 9rem;
+    color: #000;
+    height: 3.375rem;
+    border-radius:4px;
+    opacity:0.9;
+    font-size: 1.125rem;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.vx-mobile{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  .vx-mobile-content{
+    background: #F8FAFC;
+    flex: 1;
+    .mobile-center{
+      width: 75rem;
+      height: 42.38rem;
+      background: linear-gradient(270deg, #42BBF6 0%, #1677FF 100%);
+      background-image: url(../image/mini.png);
+      background-size: cover;
+      border-radius: 0.25rem;
+      margin: 5.63rem auto;
+      position: relative;
+      .mobile-image{
+        position: absolute;
+        width: 31.63rem;
+        height: 40.13rem;
+        bottom: 0;
+        right: 6.13rem;
+      }
+    }
+  }
+}
