@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "npm run serve",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --NODE_ENV=production  & serve -s dist",
+    "build": "vue-cli-service build --NODE_ENV=production",
     "lint": "vue-cli-service lint",
     "lint:fix": "vue-cli-service lint --fix",
     "analyz": "NODE_ENV=production npm_config_report=true npm run build"
