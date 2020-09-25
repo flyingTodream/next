@@ -1,7 +1,7 @@
 const path = require('path');
 const CompressionPlugin = require('compression-webpack-plugin')
-const PrerenderSPAPlugin = require('prerender-spa-plugin');
-const Renderer = PrerenderSPAPlugin.PuppeteerRenderer;
+// const PrerenderSPAPlugin = require('prerender-spa-plugin');
+// const Renderer = PrerenderSPAPlugin.PuppeteerRenderer;
 module.exports = {
   // entry: {
   //   // app: './src/main.js'
@@ -37,31 +37,32 @@ module.exports = {
           threshold: 10240,
           deleteOriginalAssets: false
         }),
-        //预渲染
-        new PrerenderSPAPlugin({
-          // 生成文件的路径，也可以与webpakc打包的一致。
-          // 下面这句话非常重要！！！
-          // 这个目录只能有一级，如果目录层次大于一级，在生成的时候不会有任何错误提示，
-          //在预渲染的时候只会卡着不动。
-          // 需要进行预渲染的路由路径
-          staticDir: path.join(__dirname, 'dist'),
+          // //预渲染
+          // new PrerenderSPAPlugin({
+          //   // 生成文件的路径，也可以与webpakc打包的一致。
+          //   // 下面这句话非常重要！！！
+          //   // 这个目录只能有一级，如果目录层次大于一级，在生成的时候不会有任何错误提示，
+          //   //在预渲染的时候只会卡着不动。
+          //   // 需要进行预渲染的路由路径
+          //   staticDir: path.join(__dirname, 'dist'),
 
-          routes: ['/', '/miniProgram', '/mall/modelCenter', '/user/myworks', '/user/myCollect'
-            , '/user/myBuy', '/404'],
-          minify: {
-            minifyCSS: true, // css压缩
-            removeComments: true // 移除注释
-          },
-          // 这个很重要，如果没有配置这段，也不会进行预编译
-          renderer: new Renderer({
-            inject: {
-              foo: 'bar'
-            },
-            headless: false,//这个必须有
-            // 在 main.js 中 document.dispatchEvent(new Event('render-event'))，两者的事件名称要对应上。
-            renderAfterDocumentEvent: 'render-event'
-          })
-        })]
+          //   routes: ['/', '/miniProgram', '/mall/modelCenter', '/user/myworks', '/user/myCollect'
+          //     , '/user/myBuy', '/404'],
+          //   minify: {
+          //     minifyCSS: true, // css压缩
+          //     removeComments: true // 移除注释
+          //   },
+          //   // 这个很重要，如果没有配置这段，也不会进行预编译
+          //   renderer: new Renderer({
+          //     inject: {
+          //       foo: 'bar'
+          //     },
+          //     headless: false,//这个必须有
+          //     // 在 main.js 中 document.dispatchEvent(new Event('render-event'))，两者的事件名称要对应上。
+          //     renderAfterDocumentEvent: 'render-event'
+          //   })
+          // })
+        ]
       }
     }
   },
